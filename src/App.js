@@ -1,25 +1,83 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { Button, Form, Col, Row } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+const Form1 = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Form className="container" onSubmit={handleSubmit}>
+      <Form.Row>
+        <Form.Label style={{ lineHeight: 1 }} column="sm" sm={1}>
+          Country (Incoming)
+        </Form.Label>
+        <Col sm={2}>
+          <Form.Control size="sm" type="email" placeholder="Email" />
+        </Col>
+        <Form.Label column="sm" sm={1}>
+          Country
+        </Form.Label>
+        <Col sm={2}>
+          <Form.Control size="sm" type="email" placeholder="Email" />
+        </Col>
+        <Form.Label column="sm" sm={1}>
+          Country
+        </Form.Label>
+        <Col sm={2}>
+          <Form.Control size="sm" type="email" placeholder="Email" />
+        </Col>
+        <Form.Label column="sm" sm={1}>
+          Country
+        </Form.Label>
+        <Col sm={2}>
+          <Form.Control size="sm" type="email" placeholder="Email" />
+        </Col>
+      </Form.Row>
+      <Form.Row>
+        <Form.Label column="sm" sm={1}>
+          Country (Incoming)
+        </Form.Label>
+        <Col sm={2}>
+          <Form.Control size="sm" type="email" placeholder="Email" />
+        </Col>
+        <Form.Label column="sm" sm={1}>
+          Country
+        </Form.Label>
+        <Col sm={2}>
+          <Form.Control size="sm" type="email" placeholder="Email" />
+        </Col>
+        <Form.Label column="sm" sm={1}>
+          Country
+        </Form.Label>
+        <Col sm={2}>
+          <Form.Control size="sm" type="email" placeholder="Email" />
+        </Col>
+        <Form.Label column="sm" sm={1}>
+          Country
+        </Form.Label>
+        <Col sm={2}>
+          <Form.Control size="sm" type="email" placeholder="Email" />
+        </Col>
+      </Form.Row>
+      <br />
+      <Button type="submit">Submit</Button>
+    </Form>
   );
+};
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <div className="container">
+          <h1>This is a form</h1>
+          <Form1 />
+        </div>
+      </>
+    );
+  }
 }
 
 export default App;
